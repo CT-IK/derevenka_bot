@@ -13,6 +13,7 @@ logging.basicConfig(level=logging.INFO)
 bot = Bot(token=BOT_TOKEN)
 dp = Dispatcher()
 dp.include_router(start_router)
+# добавить роутер команд
 
 
 async def main():
