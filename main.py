@@ -6,6 +6,7 @@ from config import BOT_TOKEN
 from handlers import router  # Не используется напрямую, но для примера
 from database.engine import create_db
 from handlers.start import start_router
+from handlers.command import command_router
 
 # Настройка логирования
 logging.basicConfig(level=logging.INFO)
@@ -14,6 +15,7 @@ bot = Bot(token=BOT_TOKEN)
 dp = Dispatcher()
 dp.include_router(start_router)
 # добавить роутер команд
+dp.include_router(command_router)
 
 
 async def main():
