@@ -1,6 +1,6 @@
-from sqlalchemy import Mapped, mapped_column, Integer, BigInteger
+from sqlalchemy import Integer, BigInteger
 from sqlalchemy.ext.declarative import declarative_base
-
+from sqlalchemy.orm import Mapped, mapped_column
 from database.engine import Base
 
 
