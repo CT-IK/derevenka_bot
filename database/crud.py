@@ -2,6 +2,7 @@ from sqlalchemy import select
 
 from .models import User
 
+
 async def get_or_create_user(session, telegram_id: int):
     # Проверяем, есть ли пользователь
     stmt = select(User).where(User.telegram_id == telegram_id)
@@ -16,3 +17,5 @@ async def get_or_create_user(session, telegram_id: int):
         await session.refresh(new_user)  # Обновляем объект
         return new_user
     return user
+
+
